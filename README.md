@@ -37,7 +37,7 @@ DSA-2040_Practical_Exam_SnitTeshome552/
 ## *Task 1: Data Warehouse Design (15 Marks)*
 
 
-## *1.Design a star schema for this data warehouse.*
+### *1.Design a star schema for this data warehouse.*
 ### *Star Schema Diagram:`Usingdbdiagram.io`*
 ![alt text](Section_1/Task_1_Data_Warehouse_Design/schema_diagram.png)
 
@@ -70,7 +70,6 @@ A *Star Schema* is a data warehousing design where a central *fact table* contai
 
 ----
 ### *3.Write SQL CREATE TABLE statements for the fact and dimension tables*
-## Data Warehouse Schema – Fact Table Sample
 
 ### *Full Schema Code Location*
 
@@ -92,7 +91,7 @@ Section_1/
 - *CustomerDim* – Stores customer details such as name, contact info, and demographics.  
 - *ProductDim* – Stores product details including category, brand, and cost.  
 - *StoreDim* – Stores store or sales channel details including location and region.  
-
+### *Data Warehouse Schema – Fact Table Sample*
 The *FactSales* table links to these dimensions for analytical queries such as roll-up, drill-down, and slicing.
 
 
