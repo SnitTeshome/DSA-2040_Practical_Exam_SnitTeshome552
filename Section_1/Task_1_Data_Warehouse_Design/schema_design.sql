@@ -35,12 +35,12 @@ CREATE TABLE CustomerDim (
 -- The primary key is ProductID.
 -- ============================
 CREATE TABLE ProductDim (
-    ProductID INTEGER PRIMARY KEY,         -- Unique identifier for each product
-    StockCode TEXT,                         -- Product stock code
-    ProductName TEXT,                       -- Name of the product
-    Category TEXT,                          -- Category of the product (e.g., Electronics, Clothing)
-    Brand TEXT,                             -- Brand name
-    UnitCost REAL                            -- Cost price of the product
+    ProductID TEXT PRIMARY KEY,        -- change INTEGER → TEXT to allow alphanumeric IDs
+    StockCode TEXT,                    -- keep TEXT
+    ProductName TEXT,                  -- keep TEXT
+    Category TEXT,                     -- keep TEXT
+    Brand TEXT,                        -- keep TEXT
+    UnitCost REAL                      -- keep REAL (float)
 );
 
 -- ============================
