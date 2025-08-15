@@ -1,0 +1,138 @@
+Country,Year,Quarter,TotalSales
+Australia,2024,4,1032.85
+Australia,2025,1,41577.22
+Australia,2025,2,40015.14
+Australia,2025,3,32560.31
+Australia,2025,4,24725.93
+Austria,2025,1,2226.48
+Austria,2025,2,1492.23
+Austria,2025,3,2708.03
+Austria,2025,4,3056.76
+Bahrain,2025,2,548.4
+Belgium,2024,4,1809.9099999999999
+Belgium,2025,1,6093.15
+Belgium,2025,2,9433.0
+Belgium,2025,3,10237.61
+Belgium,2025,4,13977.59
+Brazil,2025,2,1143.6
+Canada,2025,1,140.54
+Canada,2025,2,1705.7
+Canada,2025,3,1820.14
+Channel Islands,2024,4,363.53
+Channel Islands,2025,1,5969.62
+Channel Islands,2025,2,3560.27
+Channel Islands,2025,3,6220.53
+Channel Islands,2025,4,4336.49
+Cyprus,2024,4,1868.02
+Cyprus,2025,1,5820.13
+Cyprus,2025,2,1373.72
+Cyprus,2025,3,503.56
+Cyprus,2025,4,4677.41
+Czech Republic,2025,1,549.26
+Czech Republic,2025,4,277.48
+Denmark,2024,4,1281.5
+Denmark,2025,1,4378.21
+Denmark,2025,2,4214.83
+Denmark,2025,3,5159.55
+Denmark,2025,4,3467.83
+EIRE,2024,4,8813.88
+EIRE,2025,1,53705.07
+EIRE,2025,2,43388.68
+EIRE,2025,3,98868.02
+EIRE,2025,4,60770.25
+European Community,2025,2,623.45
+European Community,2025,3,676.8
+Finland,2024,4,892.8
+Finland,2025,1,7031.0
+Finland,2025,2,2018.48
+Finland,2025,3,5478.68
+Finland,2025,4,7125.12
+France,2024,4,9616.31
+France,2025,1,40845.63
+France,2025,2,39223.46
+France,2025,3,47239.19
+France,2025,4,72099.46
+Germany,2024,4,15241.14
+Germany,2025,1,40884.58
+Germany,2025,2,51340.84
+Germany,2025,3,53752.97
+Germany,2025,4,67647.61
+Greece,2025,1,3048.55
+Greece,2025,2,609.74
+Greece,2025,3,421.24
+Greece,2025,4,680.99
+Iceland,2024,4,711.79
+Iceland,2025,1,475.39
+Iceland,2025,2,1018.77
+Iceland,2025,3,584.91
+Iceland,2025,4,1519.14
+Israel,2025,1,779.1
+Israel,2025,3,6304.5599999999995
+Israel,2025,4,138.03
+Italy,2024,4,811.5
+Italy,2025,1,4465.32
+Italy,2025,2,1527.35
+Italy,2025,3,2417.85
+Italy,2025,4,8261.22
+Japan,2024,4,7705.07
+Japan,2025,1,5829.71
+Japan,2025,2,9506.99
+Japan,2025,3,3966.48
+Japan,2025,4,10408.12
+Lebanon,2025,1,1693.88
+Lithuania,2024,4,1661.06
+Malta,2025,2,863.16
+Malta,2025,3,1119.0
+Malta,2025,4,743.43
+Netherlands,2024,4,8784.48
+Netherlands,2025,1,72039.56
+Netherlands,2025,2,59020.53
+Netherlands,2025,3,67291.09
+Netherlands,2025,4,78310.68
+Norway,2024,4,3787.12
+Norway,2025,1,1896.21
+Norway,2025,2,5886.86
+Norway,2025,3,11594.82
+Norway,2025,4,13000.43
+Poland,2024,4,248.16
+Poland,2025,1,1535.05
+Poland,2025,2,2571.86
+Poland,2025,3,1618.35
+Poland,2025,4,1361.23
+Portugal,2024,4,2439.97
+Portugal,2025,1,7930.46
+Portugal,2025,2,6774.4400000000005
+Portugal,2025,3,4942.47
+Portugal,2025,4,11352.55
+RSA,2025,4,1002.31
+Saudi Arabia,2025,1,145.92
+Singapore,2025,1,2053.07
+Singapore,2025,2,8209.58
+Singapore,2025,3,3949.32
+Singapore,2025,4,7067.32
+Spain,2024,4,1843.73
+Spain,2025,1,17563.74
+Spain,2025,2,7675.76
+Spain,2025,3,15657.51
+Spain,2025,4,17632.11
+Sweden,2024,4,3834.3
+Sweden,2025,1,8716.4
+Sweden,2025,2,4323.08
+Sweden,2025,3,12778.16
+Sweden,2025,4,8726.39
+Switzerland,2024,4,1304.92
+Switzerland,2025,1,8756.38
+Switzerland,2025,2,13173.74
+Switzerland,2025,3,17213.75
+Switzerland,2025,4,15970.5
+USA,2025,2,383.95
+USA,2025,4,3196.44
+United Arab Emirates,2025,1,889.24
+United Arab Emirates,2025,3,1013.04
+United Kingdom,2024,4,498661.85
+United Kingdom,2025,1,1265044.28
+United Kingdom,2025,2,1486043.44
+United Kingdom,2025,3,1780845.84
+United Kingdom,2025,4,2277796.14
+Unspecified,2025,2,1337.56
+Unspecified,2025,3,1329.51
