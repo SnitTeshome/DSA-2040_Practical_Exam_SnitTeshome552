@@ -1,18 +1,40 @@
 
 
+## *Task 3: OLAP Analysis*
+
+The OLAP analysis on the *`retail_dw.db`* database explored sales data through **roll-up, drill-down, and slice operations**, complemented by visualizations to derive actionable insights.
+
+### **1. Roll-up — Total Sales by Country and Quarter**
+
+Aggregating sales from *`FactSales`* by *`Country`*, *`Year`*, and *`Quarter`* reveals that the *United Kingdom* leads in total sales, followed by *Netherlands*, *Germany*, and *France*. The top ten countries collectively dominate revenue, highlighting a concentrated market focus in Europe.
+
+### **2. Drill-down — Monthly Sales for the United Kingdom**
+
+Examining monthly sales from December 2024 to April 2025 shows fluctuations from approximately \$355,655 in February to \$498,661 in December, reflecting seasonal trends. This information provides guidance for inventory planning, promotional campaigns, and sales forecasting in the UK market.
+
+### **3. Slice — Electronics Category Sales**
+
+The total sales for the *Electronics* category amount to only \$33.88, indicating negligible contribution to overall revenue. This suggests limited demand or under-representation in the dataset, while higher-performing product lines such as *Clothing* or *Miscellaneous* likely drive the bulk of revenue. These insights inform marketing and stock allocation strategies for profitable categories.
+
+### **4. Visualization — Top 10 Countries by Total Sales**
+
+A bar chart of the top ten countries confirms that revenue is heavily concentrated in a few key markets, with the United Kingdom and Netherlands outperforming others. Lower-performing markets such as Belgium and Sweden represent potential opportunities for growth. Anomalies such as *EHE* should be clarified to ensure accurate analysis.
+
+----
+
+![Visualization](image-1.png)
+
+
+
+### **Summary and Insights**
+
+The OLAP operations effectively demonstrate multi-level aggregation and detailed examination of sales data, supporting strategic decision-making. Key takeaways include:
+
+* Focus on high-performing regions (UK and Netherlands) for targeted marketing and inventory planning.
+* Optimize stock and promotional efforts for product lines driving the most revenue.
+* Monitor underperforming markets for potential expansion opportunities.
+* Synthetic data provides a realistic framework for analysis but may not fully capture real-world dynamics.
+
+Overall, this analysis highlights the value of OLAP queries in guiding regional strategies, product management, and revenue optimization.
+
 ---
-
-### *Task 3: OLAP Analysis Report*
-
-The OLAP analysis of the retail data warehouse provides actionable insights into sales performance across countries and product categories. The **roll-up query** shows that the *United Kingdom* leads in total sales, followed by the *Netherlands*, *Germany*, and *France*. The top 10 countries collectively dominate the sales, with the UK alone contributing nearly \$6 million, highlighting a concentrated market focus in Europe.
-
-The **drill-down query** for the United Kingdom indicates monthly sales patterns ranging from approximately \$355,000 to \$498,000 per month. These fluctuations suggest possible seasonal trends and provide guidance for inventory and promotional planning.
-
-The **slice query** for the *Electronics* category reveals total sales of approximately \$12,869, which is a small fraction of overall revenue. This suggests that Electronics contributes minimally to the total sales, whereas categories like *Miscellaneous* or *Clothing* likely drive the bulk of revenue. This information can help prioritize marketing and stock allocation for high-performing product lines.
-
-The **visualization of the top 10 countries** confirms that sales are heavily concentrated in a few key markets, with the UK and Netherlands clearly outperforming others. This emphasizes the need for targeted strategies in these regions, while identifying lower-performing markets such as Belgium and Sweden for potential growth opportunities.
-
-Using synthetic data provides a realistic structure for analysis but may not capture real-world market dynamics or exact consumer behavior. Nonetheless, the data warehouse effectively demonstrates how OLAP operations—roll-up, drill-down, and slicing—support multi-level aggregation and detailed insights. These analyses enable informed decision-making regarding regional focus, product strategy, and revenue optimization.
-
----
-
