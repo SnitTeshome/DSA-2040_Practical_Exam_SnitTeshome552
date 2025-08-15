@@ -9,7 +9,7 @@ SELECT
 FROM FactSales f
 JOIN CustomerDim c ON f.CustomerID = c.CustomerID
 JOIN TimeDim t ON f.TimeID = t.TimeID
-GROUP BY c.Country, t.Year, t.Quarter
+GROUP BY c.Country, t.Year, t.Quarterg
 ORDER BY c.Country, t.Year, t.Quarter;
 
 
