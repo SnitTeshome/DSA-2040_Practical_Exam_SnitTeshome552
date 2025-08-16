@@ -438,7 +438,8 @@ iris_df['species_encoded'] = label_encoder.fit_transform(iris_df['species'])
 
 ### *Step 3: Data Exploration*
 
-![alt text](Section_2\Output_screenshoot\image3.png)
+<img width="1390" height="261" alt="image" src="https://github.com/user-attachments/assets/b6b7f17d-3bf9-4b01-89f4-1090a65f2e5c" />
+
 
 ### *Interpret the Summary Statistics*
 
