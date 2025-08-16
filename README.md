@@ -641,7 +641,8 @@ acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
 
 ---
 ### *Confusion matrix*
-![alt text](Section_2\Output_screenshoot\image8.png)
+<img width="530" height="455" alt="image" src="https://github.com/user-attachments/assets/d5ffad93-0f15-4611-8265-5826580ed865" />
+
 ### *Key Insights*
 
 * *All **setosa** samples are correctly classified — the model easily separates this class.*
