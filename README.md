@@ -650,7 +650,8 @@ acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
 * *Overall accuracy is low (\~46.7%) because of these misclassifications.*
 * *Precision and recall for virginica and versicolor are very low (10–12.5%), showing poor class-specific performance.*
 ## *Classification report*
-![alt text](Section_2\Output_screenshoot\image9.png)
+<img width="1441" height="264" alt="image" src="https://github.com/user-attachments/assets/b1c7556a-d725-47af-85bd-339ba8713e68" />
+
 
 ## *Communication*
 ![alt text](Section_2\Output_screenshoot\image10.png)
