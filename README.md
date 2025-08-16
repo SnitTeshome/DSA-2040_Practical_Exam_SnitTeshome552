@@ -454,7 +454,8 @@ iris_df['species_encoded'] = label_encoder.fit_transform(iris_df['species'])
 ## *3b: Visualizations*
 ### *Pairplot*
 
-![alt text](Section_2\Visualization\pair_plot.png)
+<img width="1112" height="986" alt="image" src="https://github.com/user-attachments/assets/4523093d-411d-4f10-b4e8-8f39c9303f8d" />
+
 ### *Plot Components*
 
 * *Diagonal (KDE plots):* Show distribution of each variable.
