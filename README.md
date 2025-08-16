@@ -472,7 +472,8 @@ iris_df['species_encoded'] = label_encoder.fit_transform(iris_df['species'])
 * *Sepal measurements:* Less effective; significant overlap between *versicolor* and *virginica*.
 * *Correlations:* Strong positive correlation between `petal length` and `petal width`; moderate correlation between `sepal length` and petal features.
 ### *Correlation heatmap*
-![alt text](Section_2\Visualization\Feature_correlation.png)
+<img width="776" height="682" alt="image" src="https://github.com/user-attachments/assets/b9a8fa39-e321-49a4-83ac-6b492939dfc7" />
+
 
 ### *Key Insights*
 
