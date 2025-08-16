@@ -3,7 +3,42 @@
 ## *Overview*
 This repository contains my submission for the *DSA 2040 End Semester Practical Exam (2025)*. The exam covers *Data Warehousing* and *Data Mining* tasks. All code is implemented in Python, using libraries such as *pandas, numpy, scikit-learn, sqlite3*, and *matplotlib*. SQL queries are executed using *SQLite*.
 
+
+
 ---
+# *Table of Contents*
+
+* *Objective*
+* *Project Folder Structure*
+* *Section-by-Section & Task List*
+
+  * *Section 1: Retail Data Warehouse*
+
+    * *Task 1 – Data Warehouse Design*
+    * *Task 2 – ETL Process Implementation*
+    * *Task 3 – OLAP Queries and Analysis*
+  * *Section 2: Iris Data Mining & Association Rule Mining*
+
+    * *Task 1 – Iris Data Preprocessing and Exploration*
+    * *Task 2 – Clustering with K-Means*
+    * *Task 3 – Classification and Association Rule Mining*
+* *Tools and Technologies*
+* *How to Run*
+* *Data Source*
+* *License*
+
+
+---
+
+
+*This project demonstrates practical applications in Data Warehousing, OLAP analysis, Data Mining, and Association Rule Mining. It aims to:*
+
+* *Implement an ETL pipeline for a retail dataset.*
+* *Perform multidimensional OLAP analysis to extract business insights.*
+* *Preprocess and explore the Iris dataset for clustering and classification.*
+* *Apply K-Means clustering and evaluate results.*
+* *Compare Decision Tree and KNN classification models.*
+* *Generate synthetic supermarket transactions for Association Rule Mining.*
 
 ## *Project Folder Structure*
 
@@ -547,9 +582,184 @@ The K-Means algorithm grouped the data points based on proximity in the petal le
 
 ---
 
+# *Task 3: Classification and Association Rule Mining*
+## *3a: Decision Tree Classification on Iris Dataset*
+#### *Loading Data*
+####  *Splitting the dataset into training and testing sets*
+`Train features shape: (116, 4)`
+`Test features shape: (30, 4)`
+#### *Further split Train-set into new Train-set and Validation-set*
+### *Base Line Model*
+*Now lets start by Base Line Model which is used to predict:how well you'd do if your model always predicted the majority class (the class with the most samples).*
+```python 
+acc_baseline = y_train.value_counts(normalize=True).max()
+print("Baseline Accuracy:", round(acc_baseline, 2))
+```
+### *Fitting the Model*
+![alt text](Section_2\Output_screenshoot\image7.png)
+
+## *Predictions*
+
+```python
+# Make predictions:
+# Predictions on training set
+y_pred_train = model.predict(X_train)
+acc_train = accuracy_score(y_train_encoded, y_pred_train)  # use encoded labels
+# Predictions on test set
+y_pred_test = model.predict(X_test)
+acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
+```
+## *Test of the model*
+`Training Accuracy: 1.0`
+`Test Accuracy: 0.93`
+
+#### *Description*
 ---
-1. Clone the repository:
-## Instruction to run
+*`Hyperparameter tuning` was not performed extensively because the baseline Decision Tree model already achieved excellent performance, with a training accuracy of 1.0 and a test accuracy of 0.93. This indicates that the model fits the training data perfectly while generalizing well to unseen data. Given the small and clean nature of the Iris dataset, further tuning of parameters such as tree depth or splitting criteria would likely yield minimal improvement and could risk overfitting. Therefore, the current model was deemed sufficient for accurate classification without additional hyperparameter optimization.*
+
+---
+### *Confusion matrix*
+![alt text](Section_2\Output_screenshoot\image8.png)
+
+### *Key Insights*
+
+* *All **setosa** samples are correctly classified — the model easily separates this class.*
+* *The model struggles with **virginica** and **versicolor**: most samples are misclassified as each other, likely due to overlapping features.*
+* *Overall accuracy is low (\~46.7%) because of these misclassifications.*
+* *Precision and recall for virginica and versicolor are very low (10–12.5%), showing poor class-specific performance.*
+## *Classification report*
+![alt text](Section_2\Output_screenshoot\image9.png)
+
+## *Communication*
+![alt text](Section_2\Output_screenshoot\image10.png)
+
+## *KNN (k=5)*
+![alt text](Section_2\Output_screenshoot\image11.png)
+
+### *Compare Performance*
+![alt text](Section_2\Output_screenshoot\image12.png)
+
+
+`Model Comparison (Overall Accuracy & F1-score):`
+
+`Decision Tree - Accuracy: 0.9333, F1: 0.9333`
+
+`KNN           - Accuracy: 0.9667, F1: 0.9668`
+
+`KNN performed better overall based on F1-score.`
+
+### *Insights*
+---
+
+*The overall accuracy and F1-score show how well each model performs across all classes on the test set.*
+
+*- Decision Tree achieved an accuracy of 0.9333 and an F1-score of 0.9333, indicating it correctly predicted roughly 93% of the samples and performed consistently across the classes.*
+*- KNN achieved a higher accuracy of 0.9667 and an F1-score of 0.9668, meaning it correctly classified about 97% of the samples and maintained slightly better balance between precision and recall for all classes.*
+
+*Conclusion:*
+*- KNN performed better overall based on F1-score, suggesting it handles the class boundaries more effectively and captures subtle differences in the features that distinguish the flower species.*
+*- The Decision Tree still performs well but is slightly less accurate and may struggle more with classes that have overlapping feature ranges (like versicolor and virginica).*
+
+*Insight:* *For this dataset, KNN is the stronger model, likely due to its ability to model smooth, non-linear decision boundaries compared to the piecewise splits of the Decision Tree.*
+
+
+---
+# *Part-B Association Rule Mining*
+## *Step-1. Simulate  Synthetic Transactional Data*
+
+Generate Synthetic Transactional Data
+*This section generates `30 supermarket transactions.` Each transaction includes between `2 to 8 items` randomly selected from a pool of `30 unique grocery items.` To ensure reproducibility, a random seed is set. The resulting transactions are stored in a pandas DataFrame and saved as a CSV file for future use.*
+C:\Users\Snit Kahsay\Desktop\DSA-2040_Practical_Exam_SnitTeshome552\Section_2\Output_screenshoot\image13.png
+![alt text](Section_2\Output_screenshoot\image13.png)
+
+![alt text](Section_2\Output_screenshoot\image14.png)
+
+![alt text](Section_2\Output_screenshoot\image17.png)
+
+![alt text](Section_2\Output_screenshoot\image18.png)
+
+
+
+---
+
+*The top 5 association rules extracted from the synthetic supermarket transactions provide actionable insights into customer buying behavior. The rule “*Chips, Cookies → Soda*” has a support of 0.2, meaning 20% of transactions contain all three items.*
+
+---
+
+*Insights from the Top 5 Association Rules:*
+
+* *“Chips, Cookies → Soda”*: Found in 20% of transactions, with a confidence of 75% and a lift of 3.214. This indicates that customers who buy Chips and Cookies are highly likely to also purchase Soda, showing a strong positive association.
+
+* *“Soda → Chips, Cookies”*: Also in 20% of transactions, with a confidence of 85.7% and a lift of 3.214. Customers buying Soda have a very high chance of buying Chips and Cookies, confirming a strong co-purchase pattern.
+
+* *“Cookies → Soda”*: Appears in 20% of transactions, with 54.5% confidence and a lift of 2.338. Customers buying Cookies often buy Soda as well, suggesting a complementary snack pairing.
+
+* *“Soda → Cookies”*: Present in 20% of transactions, with 85.7% confidence and a lift of 2.338. Those who purchase Soda frequently also buy Cookies, highlighting a common purchase combination.
+
+* *“Chips, Soda → Cookies”*: Seen in 20% of transactions, with 85.7% confidence and a lift of 2.338. Buying Chips and Soda strongly increases the likelihood of buying Cookies, indicating a typical snack combo that could be used for promotions or bundle deals.
+
+---
+
+
+`Sample Rule Analysis:`
+`Rule: ['Chicken'] -> ['Rice']`
+`Support: 0.20, Confidence: 1.00, Lift: 5.00`
+
+
+ 
+---
+
+(`antecedent → consequent`) doesn’t imply causation\*\*, it just shows conditional probability:
+
+* `{'Chicken'} → {'Rice'}` means: *“Among all transactions that include Chicken, 100% also include Rice.”*
+
+So it’s not about which comes first in reality—it’s about the **conditional probability given the antecedent**.
+
+*Rule Overview:*
+
+*`{'Chicken'} -> {'Rice'}`*
+
+*Support (0.20):*
+*Out of all transactions, 20% include both Chicken and Rice. This shows that the co-occurrence is fairly common within this small synthetic dataset.*
+
+*Confidence (1.00):*
+*All transactions containing Chicken also include Rice. This means that buying Chicken gives a 100% chance that Rice will be bought in the same basket.*
+
+*Lift (5.00):*
+*Lift compares the observed co-occurrence to what would be expected if Chicken and Rice were independent. A lift greater than 1 (5.00 here) indicates a very strong positive association; Chicken and Rice are bought together much more often than expected by chance.*
+
+*Detailed Implications:*
+
+* *Cross-Selling Opportunities:*
+  *Placing Rice near Chicken on shelves or suggesting Rice in online “frequently bought together” sections could maximize combined sales.*
+
+* *Inventory Management:*
+  *If Chicken sales spike, retailers may anticipate a proportional increase in Rice demand, helping prevent stockouts.*
+
+* *Promotional Bundling:*
+  *Promotions like “Buy Chicken, get a discount on Rice” could leverage this strong association to boost revenue and customer satisfaction.*
+
+*Visual Illustration of the Rule:*
+
+```
+ Chicken → Rice
++-----------------+
+|  Transactions:  |
+|  Chicken present|
+|  100% also buy  |
+|  Rice           |
++-----------------+
+Lift: 5.00 → Very strong positive association
+```
+
+*Conclusion:*
+
+*The rule is highly actionable for retail strategy: it identifies a very strong link between Chicken and Rice purchases. Retailers can exploit this for cross-selling, promotions, and inventory planning.*
+
+![alt text](Section_2/Output_screenshoot/image19.png)
+
+---
+### 1. Clone the repository:
 ```
 ```bash
 git clone https://github.com/<YourUsername>/DSA-2040_Practical_Exam_SnitTeshome552.git
@@ -578,18 +788,15 @@ pip install pandas numpy matplotlib scikit-learn seaborn mlxtend
 
 ## *Notes*
 
-* All synthetic data is reproducible using provided scripts.
-* Analysis reports are included in Markdown or Notebook comments.
-* Outputs (plots, tables) are saved in designated folders or embedded in notebooks.
-* Any missing or partial outputs are included to demonstrate attempted work for partial credit.
+* . Data Source
 
+*Online Retail Dataset: UCI ML Repository (~500,000 rows)*
+
+*Iris Dataset: scikit-learn built-in dataset*
+
+*Synthetic Transactions: Generated within scripts for association rule mining
 ---
 
-## *Author*
+## *License*
 
-*Snit Teshome*
-*DSA 2040 – USIU-A 2025*
-
-
-
-
+*All code and analysis are open for educational purposes; attribution required for reuse.*
