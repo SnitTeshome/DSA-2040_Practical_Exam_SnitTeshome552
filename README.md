@@ -524,7 +524,8 @@ print("Testing set size:", X_test.shape[0])
 # *Task 2: Clustering with K-Means*
 ### *Loading the preprocced data*
 
-![alt text](Section_2\Output_screenshoot\image5.png)
+<img width="1438" height="180" alt="image" src="https://github.com/user-attachments/assets/39090547-c502-405a-abaf-47e5bc9f0a63" />
+
 
 
 ## *2a: K-Means Clustering with ARI Evaluation*
