@@ -559,7 +559,8 @@ print("Testing set size:", X_test.shape[0])
 - The plot confirms that 3 clusters capture the natural grouping in the data most effectively
 
 ## *2c: Visualize clusters (petal length vs width) for k=3*
-![alt text](Section_2\Visualization\K_means.png)
+<img width="691" height="547" alt="image" src="https://github.com/user-attachments/assets/5d38106e-d729-4be2-a16c-311105f5b5aa" />
+
 ### *Interpretation of the Clusters*
 
 The K-Means algorithm grouped the data points based on proximity in the petal length/width feature space:
