@@ -662,7 +662,8 @@ acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
 
 
 ### *Compare Performance*
-![alt text](Section_2\Output_screenshoot\image12.png)
+<img width="1412" height="259" alt="image" src="https://github.com/user-attachments/assets/78654b70-fd80-405e-ac79-98b5640d7c4c" />
+
 
 
 `Model Comparison (Overall Accuracy & F1-score):`
