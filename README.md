@@ -697,7 +697,8 @@ Generate Synthetic Transactional Data
 *This section generates `30 supermarket transactions.` Each transaction includes between `2 to 8 items` randomly selected from a pool of `30 unique grocery items.` To ensure reproducibility, a random seed is set. The resulting transactions are stored in a pandas DataFrame and saved as a CSV file for future use.*
 
 
-![alt text](Section_2\Output_screenshoot\image13.png)
+<img width="1447" height="522" alt="image" src="https://github.com/user-attachments/assets/ed629d93-b08c-46ae-b938-d5683bddc4f2" />
+
 
 
 ![alt text](Section_2\Output_screenshoot\image14.png)
