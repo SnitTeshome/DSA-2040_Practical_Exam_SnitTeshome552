@@ -617,7 +617,8 @@ acc_baseline = y_train.value_counts(normalize=True).max()
 print("Baseline Accuracy:", round(acc_baseline, 2))
 ```
 ### *Fitting the Model*
-![alt text](Section_2\Output_screenshoot\image7.png)
+<img width="1439" height="84" alt="image" src="https://github.com/user-attachments/assets/8784f588-5c5c-47dd-982d-d35eda0a56e2" />
+
 
 ## *Predictions*
 
