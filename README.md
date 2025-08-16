@@ -434,7 +434,8 @@ label_encoder = LabelEncoder()
 iris_df['species_encoded'] = label_encoder.fit_transform(iris_df['species'])
 
 ```
-![alt text](Section_2\Output_screenshoot\image2.png)
+<img width="1439" height="248" alt="image" src="https://github.com/user-attachments/assets/9acedcfa-eccc-4c07-b07f-1754ed54ea8f" />
+
 ### *Step 3: Data Exploration*
 
 ![alt text](Section_2\Output_screenshoot\image3.png)
