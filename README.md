@@ -46,30 +46,40 @@ This repository contains my submission for the *DSA 2040 End Semester Practical 
 
 DSA-2040_Practical_Exam_SnitTeshome552/
 ├── Section_1/
-│   ├── Task_1_DataWarehouse_Design.sql
-│   ├   ├── schema_diagram.png
-│   ├   └── schema_design.sql
+│   ├── Data
+│   ├── Task_1_DataWarehouse_Design/
+│   │   ├── schema_diagram.png
+│   │   └── schema_design.sql
 │   ├── Task_2_ETL_Process_Implementation/
 │   │   ├── etl_retail.py
 │   │   ├── retail_dw.db
-│   │   └── synthetic_data/             ← CSVs if generated
+│   │   └── synthetic_data/              ← CSVs if generated
 │   └── Task_3_OLAP_Queries_and_Analysis/
 │       ├── olap_queries.sql
-│       ├── total_sales_by_Country.png
-│       └── analysis_report.md
+│       ├── total_sales_by_country.png
+│       ├── analysis_report.md
+│       └── queries.ipynb
 ├── Section_2/
-│   ├── preprocessing_iris.py    
-│   ├── clustering_iris.py
-│   ├── mining_iris_basket.ipynb
-│   ├── iris.ipynb
-│   └── train_test/                     ← Train/test CSV splits
-├── Visualization/
-│   └── *.png                           ← Additional visualizations
+│   ├── Task_1_Data_Preprocessing_Exploration/
+│   │   ├── iris_preprocessed.csv
+│   │   └── preprocessing_iris.py
+│   ├── Task_2_Clustering/
+│   │   └── clustering_iris.py
+│   ├── Task_3_Classification_Association_Rule_Mining/
+│   │   ├── mining_iris_basket.ipynb
+│   │   ├── generated_raw.csv
+│   │   ├── generated_encoded.csv
+│   └── Visualization/
+│       └── *.png                        ← Additional visualizations
+├── LICENSE
+├── .gitignore
+├── requirements.txt
 └── README.md
-                                  # This file
+
+
 ````
 # *Section 1: Data Warehousing (50 Marks)*
-## *Task 1: Data Warehouse Design (15 Marks)*
+# *Task 1: Data Warehouse Design (15 Marks)*
 
 
 ### *1.Design a star schema for this data warehouse.*
@@ -389,7 +399,7 @@ The bar chart titled *"Top 10 Countries by Total Sales"* displays the total sale
 
 ---
 # *Section-2*
-## *Task 1: Iris Data Preprocessing and Exploration*
+# *Task 1: Iris Data Preprocessing and Exploration*
 
 ### *Step 1: Load the Iris dataset*
 ```python
@@ -620,7 +630,6 @@ acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
 ---
 ### *Confusion matrix*
 ![alt text](Section_2\Output_screenshoot\image8.png)
-
 ### *Key Insights*
 
 * *All **setosa** samples are correctly classified — the model easily separates this class.*
@@ -669,14 +678,15 @@ acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
 
 Generate Synthetic Transactional Data
 *This section generates `30 supermarket transactions.` Each transaction includes between `2 to 8 items` randomly selected from a pool of `30 unique grocery items.` To ensure reproducibility, a random seed is set. The resulting transactions are stored in a pandas DataFrame and saved as a CSV file for future use.*
-C:\Users\Snit Kahsay\Desktop\DSA-2040_Practical_Exam_SnitTeshome552\Section_2\Output_screenshoot\image13.png
+
+
 ![alt text](Section_2\Output_screenshoot\image13.png)
+
 
 ![alt text](Section_2\Output_screenshoot\image14.png)
 
 ![alt text](Section_2\Output_screenshoot\image17.png)
 
-![alt text](Section_2\Output_screenshoot\image18.png)
 
 
 
@@ -783,20 +793,46 @@ cd DSA-2040_Practical_Exam_SnitTeshome552
 ```bash
 pip install pandas numpy matplotlib scikit-learn seaborn mlxtend
 ```
+---
+
+### *Tools & Technologies*
+
+* *Language & Notebooks*: ***Python 3.x***, ***Jupyter Notebook***
+* *Core Libraries*: ***pandas***, ***numpy***, ***matplotlib***, seaborn, ***scikit-learn***, mlxtend
+* *Database*: ***sqlite3 (SQLite)***; client optional (*e.g., DB Browser for SQLite*)
+* *ETL & Utilities*: faker (*optional for synthetic data*), logging, datetime, pathlib
+* *Version Control*: Git & GitHub
 
 ---
 
-## *Notes*
+### *Data Sources*
 
-* . Data Source
+* *Retail (Option A)*: ***UCI “Online Retail” dataset*** (*CSV columns: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country*)
+* *Retail (Option B)*: Synthetic data generated in ETL (*faker, seeded; \~1,000 rows over 2 years, 100 customers, 5–10 countries*)
+* *Iris*: ***Built-in scikit-learn dataset (load\_iris())***, or synthetic Gaussian clusters (*150 samples*) if chosen
+* *All synthetic generation code is included for reproducibility (fixed random\_state / seeds).*
 
-*Online Retail Dataset: UCI ML Repository (~500,000 rows)*
-
-*Iris Dataset: scikit-learn built-in dataset*
-
-*Synthetic Transactions: Generated within scripts for association rule mining
 ---
 
-## *License*
+### *What’s Included (picked from repo files)*
 
-*All code and analysis are open for educational purposes; attribution required for reuse.*
+* *Schemas*: Section\_1/Task\_1\_Data\_Warehouse\_Design/schema\_design.sql, schema\_diagram.png
+* *ETL*: Section\_1/Task\_2\_ETL\_Process\_Implementation/etl\_retail.py, retail\_dw\.db (after run)
+* *OLAP*: Section\_1/Task\_3\_OLAP\_Queries\_and\_Analysis/olap\_queries.sql + charts/screenshots
+* *Preprocessing & EDA*: Section\_2/preprocessing\_iris.py (+ pairplot, heatmap, boxplots)
+* *Clustering*: Section\_2/clustering\_iris.py (k=2,3,4, elbow curve, ARI)
+* *Classification & ARM*:
+
+  * Decision Tree & KNN in Section\_2/iris.ipynb / mining\_iris\_basket.ipynb
+  * Apriori rules + top-5 rules and analysis in Section\_2/Task-3\_Classification\_Association Rule Mining/
+* *Generated files*: generated\_raw\.csv, generated\_encoded.csv
+
+---
+
+### *License*
+
+*Unless otherwise noted, code and synthetic data are released under the MIT License.*
+*Any referenced public datasets remain under their original licenses (UCI terms).*
+
+---
+
