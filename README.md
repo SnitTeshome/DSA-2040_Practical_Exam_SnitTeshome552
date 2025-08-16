@@ -658,7 +658,8 @@ acc_test = accuracy_score(y_test_encoded, y_pred_test)  # use encoded labels
 
 
 ## *KNN (k=5)*
-![alt text](Section_2\Output_screenshoot\image11.png)
+<img width="1452" height="269" alt="image" src="https://github.com/user-attachments/assets/2154b108-b253-48ab-9fb5-beecedf21c2c" />
+
 
 ### *Compare Performance*
 ![alt text](Section_2\Output_screenshoot\image12.png)
