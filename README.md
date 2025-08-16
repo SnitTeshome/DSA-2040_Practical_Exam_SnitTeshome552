@@ -421,7 +421,8 @@ print("\nMissing values in each column:")
 print(iris_df.isnull().sum())
 ```
 
-![alt text](Section_2\Output_screenshoot\image1.png)
+<img width="1381" height="170" alt="image" src="https://github.com/user-attachments/assets/fa528a85-011f-4550-8533-ac17a30f03fb" />
+
 ### *b) Normalize Features Using Min-Max Scaling and Encoding*
 ```python
 scaler = MinMaxScaler()
