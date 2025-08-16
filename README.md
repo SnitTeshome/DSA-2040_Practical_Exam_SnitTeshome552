@@ -701,7 +701,8 @@ Generate Synthetic Transactional Data
 
 
 
-![alt text](Section_2\Output_screenshoot\image14.png)
+<img width="1478" height="556" alt="image" src="https://github.com/user-attachments/assets/f20419c7-76ac-43d8-94ae-ddb544cadd70" />
+
 
 ![alt text](Section_2\Output_screenshoot\image17.png)
 
