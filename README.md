@@ -412,7 +412,8 @@ print("First 5 rows of the dataset:")
 iris_df.head()
 ```
 
-![alt text](Section_2\Output_screenshoot\image.png)
+<img width="1414" height="194" alt="image" src="https://github.com/user-attachments/assets/01518528-18fa-42e6-964c-35b1da4af5b1" />
+
 
 ### *Step 2:Data Preprocessing*
 ```python
