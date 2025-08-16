@@ -543,7 +543,8 @@ print("Testing set size:", X_test.shape[0])
 `Adjusted Rand Index (k=4): 0.6072`
 
 ## *3. Elbow Curve for Optimal k*
-![alt text](Section_2\Visualization\Elbow_curve.png)
+<img width="841" height="547" alt="image" src="https://github.com/user-attachments/assets/a39c7ed9-e7ac-40fa-9b4a-abc028cc45cf" />
+
 
 
 *Key Observations*:
