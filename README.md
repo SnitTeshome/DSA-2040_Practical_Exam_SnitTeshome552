@@ -500,7 +500,8 @@ iris_df['species_encoded'] = label_encoder.fit_transform(iris_df['species'])
   * *Almost no linear relationship; scatter plot appears random.*
 
 ### *3c: Identify potential outliers using boxplots*
-<img width="1438" height="180" alt="image" src="https://github.com/user-attachments/assets/25fda6ae-b619-41fe-88d2-640a7f7dabe1" />
+<img width="1001" height="547" alt="image" src="https://github.com/user-attachments/assets/077e30b0-6adf-4ab4-a828-0b0cc24cfad8" />
+
 
 ## *Handling Outliers using IQR*
 <img width="1436" height="227" alt="image" src="https://github.com/user-attachments/assets/3b738748-b724-486b-a0d0-74a6e82f319e" />
